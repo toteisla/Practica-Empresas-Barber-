@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+<title>Pinturas Barberá</title>
+<meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/librerias.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript">
+</script>
+<style type="text/css">
+#contactForm label.error {
+	padding-left:8px;
+	background-color:#ff0000;
+	color:#ffffff;
+	padding:2px;
+	width: auto;
+	display: inline;
+}
+</style>
+</head>
+<body onload='borrarcampos()'>
+<div id="main_body">
+  <div id="top_part">
+    <div id="top_part_image">
+        <div id="main_logo"> <a href="#"><img src="images/main_logo.png"  width='200px' height='100px' alt=""  /></a> </div>
+    </div>
+    <div id="main_menu_bg">
+      <div id="main_menu_body">
+	<div class="menu_links"> <a href="index.html" class="menu_links">Inicio</a><span class="menu_border">&nbsp;</span> <a href="about.html" class="menu_links">Quienes somos</a><span class="menu_border">&nbsp;</span> <a href="productos.php" class="menu_links">Productos</a><span class="menu_border">&nbsp;</span> <a href="contact.html" class="menu_links">Contactanos</a> </div>        <!-- Menu Links Ends Here -->      </div>
+    </div>
+  </div>
+  <div id="inner_content_body">
+    <div class="left_content_body">
+      <p class="page_title"> CONTACTANOS </p>
+      Estamos ubicados en la zona franca Ronda de Vigilancia de la Zona Franca, 20, Zona Franca 11011 Cádiz
+      <p style="margin-top:15px;"> <a href="#"><iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Ronda+de+Vigilancia+de+la+Zona+Franca,+20,+Zona+Franca&amp;sll=40.396764,-3.713379&amp;sspn=8.38053,19.753418&amp;ie=UTF8&amp;hq=&amp;hnear=Ronda+de+Vigilancia+de+la+Zona+Franca,+20,+11011+C%C3%A1diz,+Andaluc%C3%ADa&amp;t=m&amp;ll=36.503151,-6.261606&amp;spn=0.033117,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Ronda+de+Vigilancia+de+la+Zona+Franca,+20,+Zona+Franca&amp;sll=40.396764,-3.713379&amp;sspn=8.38053,19.753418&amp;ie=UTF8&amp;hq=&amp;hnear=Ronda+de+Vigilancia+de+la+Zona+Franca,+20,+11011+C%C3%A1diz,+Andaluc%C3%ADa&amp;t=m&amp;ll=36.503151,-6.261606&amp;spn=0.033117,0.054932&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small></a> </p>
+      <p style="margin-top:15px;" class="text_style2">Contactanos</p>
+      <br />
+      <div class="contact">
+        <form id="contactForm"  method="post" action="mail.php">
+          <p> Nombre <span class="star">*</span> </p>
+          <p>
+            <input type="text" maxlength="30" name="name" id="name" onkeypress="return valida(this,event)" value=""/>
+          </p>
+          <p style="margin-top:20px;"> E-Mail <span class="star">*</span> </p>
+          <p>
+            <input type="text" maxlength="150" name="email" id="email" onkeypress="return valida(this,event)" value=""/>
+          </p>
+          <p style="margin-top:20px;"> Escriba su mensaje </p>
+          <p>
+            <textarea rows="3" cols="50" onKeyUp="return maximaLongitud(this,300)" name="message" id="message" value=''></textarea>
+          </p>
+            <input type='button' class='boton' value='  Enviar  ' name="submit" id="submit" onclick='compruebaEmail()' />
+        </form>
+        <div id='enviodemail'></div>
+      </div>
+    </div>
+    <div class="right_content_body">
+      <p class="page_sub_title"> Contacta Con Nosotros </p>
+      <ul class="more_links">
+        <li>11011 Cádiz</li>
+        <li>España, Cádiz</li>
+        <li>Telefono: <b>956 25 69 56 / 956 27 96 16</b></li>
+        <small><li>Fax:      <b>956 27 26 32</b></li></small>
+        <li>Email: <b>barbera@pinturasbarbera.net</b></li>
+      </ul>
+      <br />
+      <div class="headers"> Pinturas Barbera </div>
+        <div class="testi_box"> <span>Fundada en 1985, Pinturas Industriales Barbera se constituye como una Sociedad Anónima de tres socios, siendo el gerente de la entidad D. Pedro Barberá García. </span>
+          <p>-AFT Design-</p>
+        </div>
+    </div>
+    <div class="clear"> </div>
+  </div>
+<div id="footer">
+    <div class="left">
+      <div class="footer_links" >
+      <a href="index.html">Inicio</a> &nbsp;| &nbsp;<a href="about.html">Quienes somos</a> &nbsp;| &nbsp;<a href="productos.php">Productos</a> &nbsp;| &nbsp;<a href="contact.html">Contactanos</a>
+    </div>
+    </div>
+    <div class="right" style="padding-right:30px;"> Copyright &copy; 2012 <a style="color:#ffffff;" href="www.grupomontes.com" target="_blank">AFT grupo montes</a>. All rights reserved | Design by <a style="color:#ffffff;" href="http://www.grupomontes.com/" target="_blank">AFT Design</a></div>
+  </div>
+</div>
+</body>
+</html>
